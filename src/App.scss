@@ -1,0 +1,62 @@
+$color-blue: #69c8ecff;
+
+
+
+*{
+margin: 0;
+}
+
+.App {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    height: 100vh;
+}
+
+.filter-box {
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    &__logo {
+        height: 100px;
+        width: 300px;
+        padding-bottom: 30px;
+    }
+    &__input {
+        border: 2px solid $color-blue;
+    }
+}
+
+.wrap {
+    height: 70vh ;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    &__character{
+        background-color: $color-blue;
+        margin: 10px;
+        color: white;
+        &--image{
+            height: 250px;
+            width: 200px;
+        }
+        &--name {
+            padding-left: 10px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            font-weight: bold;
+        }
+        &--species {
+            padding-left: 10px;
+            padding-bottom: 10px;
+        }
+    }
+    
+
+    
+}
