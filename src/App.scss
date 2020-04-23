@@ -1,9 +1,27 @@
 $color-blue: #69c8ecff;
 
+.fas{
+    background-color: $color-blue;
+    font-size: 25px;
+}
+.fa-heartbeat{
+    color: red;
+}
+.fa-skull-crossbones {
+    color: black;
+}
 
-
-*{
+body{
 margin: 0;
+background-color: black;
+font-family: Lucida Console,Lucida Sans Typewriter,monaco,Bitstream Vera Sans Mono,monospace; }
+
+p {
+    background-color: $color-blue;
+}
+
+.link{
+    text-decoration: none;
 }
 
 .App {
@@ -11,7 +29,6 @@ margin: 0;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: black;
     height: 100vh;
 }
 
@@ -28,6 +45,7 @@ margin: 0;
     }
     &__input {
         border: 2px solid $color-blue;
+        color: white;
     }
 }
 
@@ -59,4 +77,45 @@ margin: 0;
     
 
     
+}
+
+.card-box {
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ &__link-return{
+     margin-left: 425px;
+     text-decoration: none;
+     color: white;
+ }
+&__infoCharacter {
+    color: white;
+    background-color: $color-blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    width: 500px;
+    padding-right: 10px;
+    &--image {
+        padding-left: 20px;
+        padding-right: 10px;
+        height: 250px;
+        width: 200px;
+    }
+    &--text{
+        padding-left:10px;
+    }
+    
+}}
+
+.alien {
+    height: 30px;
+    width: 30px;
+}
+.woman {
+    height: 30px;
+    width: 30px;
+    color:black;
 }
