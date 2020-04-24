@@ -1,5 +1,6 @@
 $color-blue: #69c8ecff;
 
+
 .fas{
     background-color: $color-blue;
     font-size: 25px;
@@ -46,6 +47,7 @@ p {
     &__input {
         border: 2px solid $color-blue;
         color: white;
+        background-color: black;
     }
 }
 
@@ -96,7 +98,7 @@ p {
     justify-content: center;
     align-items: center;
     height: 300px;
-    width: 500px;
+    width: 70%;
     padding-right: 10px;
     &--image {
         padding-left: 20px;
@@ -119,3 +121,56 @@ p {
     width: 30px;
     color:black;
 }
+
+@media all and (max-width: 767px) {
+    .card-box {
+        &__infoCharacter {
+            width: 90%;
+            display: flex;
+            margin-left: 10px;
+            &--text {
+                text-align: start;
+                margin-right: 10px;
+                margin-left: 5px;
+                height: 200px;
+                width: 200px;
+                font-size: 12px;
+                display: flex;
+                flex-wrap: wrap;
+            }
+        }
+        &__link-return {
+            margin:0;
+            padding-bottom: 10px;
+        } 
+        &__logo {
+            height: 100px;
+            width: 300px;
+            padding-bottom: 30px;
+            padding-top: 10px; 
+        }
+    }
+    .detail-image {
+        width: 200px;
+        height: 200px;
+        padding-left: 20px;
+    }
+    p{
+        margin:0;
+        padding : 5px;
+    }
+    .fas{
+        font-size: 12px;
+    }
+}
+ 
+@media (min-width: 768px) and (max-width: 980px) {
+    .card-box {
+        &__infoCharacter {
+            &--logo {
+                padding: 10px 0 30px;
+            }
+        }
+    }
+}
+
