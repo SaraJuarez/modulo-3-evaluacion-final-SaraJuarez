@@ -2,11 +2,12 @@ import React from 'react';
 import { Link } from "react-router-dom";
 import miscellaneous from './miscellaneous.png';
 import human from './mujer.png';
+import PropTypes from 'prop-types';
+
 
 const CharacterDetail = (props) => {
     let characterDetail =
         props.characters.find(character => character.id === parseInt(props.match.params.id))
-    console.log(characterDetail)
 
     return (
         <div className='card-box'>
@@ -31,6 +32,12 @@ const CharacterDetail = (props) => {
 
         </div>
     )
+}
+
+CharacterDetail.propTypes = {
+    characters: PropTypes.array,
+    match: PropTypes.object,
+
 }
 
 

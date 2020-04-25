@@ -5,6 +5,7 @@ import CharacterList from './components/characterList';
 import getDataFromApi from './services/getDataFromApi';
 import { Route, Switch } from 'react-router-dom';
 import CharacterDetail from './components/characterDetail';
+import PropTypes from 'prop-types';
 
 
 function App() {
@@ -24,8 +25,6 @@ function App() {
   }
 
   const handleInput = (ev) => {
-
-    // cada vez que hago un cambio en el input, se ejecuta handleInput y se renueva el valor de characterSelect, filtrando el array character y guardando los cambios en characterFilter, que es lo que se pinta. Si yo escribo Rick, me salen los personajes que contienen esas letras(se filtra el array character guardando los resultados en characterFilter y pitando), si borro y escribo rock, vuelve a filtrar el array character y a buscar las letras que coincidan, guardando el resultado el characterFilter. Es decir, uso character como fuente de información y characterFilter como array donde se hacen los cambios y se pintan en pantalla.
     let inputText = ev.target.value;
     setInputText(inputText);
 
@@ -59,4 +58,11 @@ function App() {
   );
 }
 
+App.propTypes = {
+  match: PropTypes.shape({
+    params: PropTypes.shape({
+      characterId: PropTypes.string,
+    }),
+  }),
+}
 export default App;

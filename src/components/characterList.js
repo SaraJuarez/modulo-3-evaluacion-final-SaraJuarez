@@ -1,5 +1,6 @@
 import React from 'react';
 import CharacterCard from './characterCard';
+import PropTypes from 'prop-types';
 
 
 
@@ -14,6 +15,10 @@ const CharacterList = (props) => {
             {charactersListHtml}
         </div>
     )
+}
+
+CharacterList.propTypes = {
+    characters: PropTypes.array,
 }
 
 
