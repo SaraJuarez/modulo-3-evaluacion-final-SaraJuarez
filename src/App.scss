@@ -87,7 +87,7 @@ p {
  justify-content: center;
  align-items: center;
  &__link-return{
-     margin-left: 425px;
+     margin-left: 575px;
      text-decoration: none;
      color: white;
  }
@@ -98,7 +98,7 @@ p {
     justify-content: center;
     align-items: center;
     height: 300px;
-    width: 70%;
+    width: 50%;
     padding-right: 10px;
     &--image {
         padding-left: 20px;
@@ -127,7 +127,6 @@ p {
         &__infoCharacter {
             width: 90%;
             display: flex;
-            margin-left: 10px;
             &--text {
                 text-align: start;
                 margin-right: 10px;
@@ -166,11 +165,27 @@ p {
  
 @media (min-width: 768px) and (max-width: 980px) {
     .card-box {
+        &__link-return {
+            margin-left: 470px;
+        }
         &__infoCharacter {
-            &--logo {
-                padding: 10px 0 30px;
+            width: 70%;
+            &--text {
+                margin-left: 10px;
+                margin-right: 10px;
             }
         }
+        &__logo {
+                padding: 10px 0 30px;
+            }
+            
+        }
+        .detail-image {
+            margin: 10px;
+            margin-left: 20px;
+            height: 200px;
+            width: 200px;
+        }
     }
-}
+
 
