@@ -12,13 +12,10 @@ function App() {
   const [character, setCharacter] = useState([]);
   const [characterFilter, setCharacterFilter] = useState([]);
   const [inputText, setInputText] = useState('');
+
   useEffect(() => {
-    // localStorage.setItem('search', '')
     getDataFromApi().then(data => { setCharacter(data); setCharacterFilter(data) })
   }, []);
-
-
-  // const lastSearch = localStorage.getItem('search');
 
   const preventDefault = (ev) => {
     ev.preventDefault();
@@ -29,6 +26,8 @@ function App() {
     setInputText(inputText);
 
     let charactersSelected = character.filter(character => character.name.toUpperCase().includes(inputText.toUpperCase()))
+
+
     if (charactersSelected.length === 0) {
       alert(`No hay ningún personaje que coincida con la palabra ` + inputText)
     }
